@@ -4,8 +4,8 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 import { Container, Typography, CssBaseline, Grid, Button, } from '@mui/material';
-import JniAppBar from './JniAppBar';
-import jniStyles from './jni_styles';
+import JniAppBar from './components/JniAppBar';
+import jniStyles from './styles/jni_styles';
 
 
 const App = () => {
@@ -33,7 +33,7 @@ const App = () => {
 							<Grid container spacing={2} justifyContent="center">
 								<Grid item>
 									<Button variant="contained" color="primary">
-										See my photos
+										First Button
 									</Button>
 								</Grid>
 								<Grid item>
