@@ -3,49 +3,53 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-import { Container, Typography, CssBaseline, Grid, Button, } from '@mui/material';
+import { Container, Typography, CssBaseline, Grid, Button, ThemeProvider, } from '@mui/material';
 import JniAppBar from './components/JniAppBar';
 import jniStyles from './styles/jni_styles';
+import { useThemeContext } from './theme/ThemeContextProvider';
 
 
 const App = () => {
+	const { theme  } = useThemeContext();
 	return (
 		<>
-			<CssBaseline />
-			<JniAppBar />
-			<main>
-				<div>
-					<Container maxWidth="sm">
-						<Typography variant="h2" align="center" color="textPrimary" gutterBottom>
-							Learning Material UI
-						</Typography>
-						<Typography 
-							sx={jniStyles.redBackgroundHoverStyle}
-							variant="h5" 
-							align="center" 
-							color="textSecondary" 
-							paragraph>
-							Using the Material UI library to build a simple React app.
-							However I added much more text here to see how this will go.
-						</Typography>
+			<ThemeProvider theme={theme}>
+				<CssBaseline />
+				<JniAppBar />
+				<main>
+					<div>
+						<Container maxWidth="sm">
+							<Typography variant="h2" align="center" color="textPrimary" gutterBottom>
+								Learning Material UI
+							</Typography>
+							<Typography 
+								sx={jniStyles.redBackgroundHoverStyle}
+								variant="h5" 
+								align="center" 
+								color="textSecondary" 
+								paragraph>
+								Using the Material UI library to build a simple React app.
+								However I added much more text here to see how this will go.
+							</Typography>
 
-						<div>
-							<Grid container spacing={2} justifyContent="center">
-								<Grid item>
-									<Button variant="contained" color="primary">
-										First Button
-									</Button>
+							<div>
+								<Grid container spacing={2} justifyContent="center">
+									<Grid item>
+										<Button variant="contained" color="primary">
+											First Button
+										</Button>
+									</Grid>
+									<Grid item>
+										<Button variant="outlined" color="primary">
+											Secondary action
+										</Button>
+									</Grid>
 								</Grid>
-								<Grid item>
-									<Button variant="outlined" color="primary">
-										Secondary action
-									</Button>
-								</Grid>
-							</Grid>
-						</div>
-					</Container>
-				</div>
-			</main>
+							</div>
+						</Container>
+					</div>
+				</main>
+			</ThemeProvider>
 		</>
 	)
 }

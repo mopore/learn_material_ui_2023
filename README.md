@@ -28,8 +28,12 @@ Install the libs with `pnpm add @mui/material @emotion/react @emotion/styled`.
 Add the robo font to the project with `pnpm add @fontsource/roboto`.
 Add the icons to the project with `pnpm add @mui/icons-material`.
 
-If you are looking for components: https://mui.com/components/
 
+
+## Findings And Decisions
+- If you are looking for components: https://mui.com/components/
+- Using sxStyle to style components.
+- Integrating theme mode toggle from https://github.com/RidhwanDev/mui-darkmode/tree/main
 
 
 

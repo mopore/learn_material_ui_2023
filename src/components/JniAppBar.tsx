@@ -1,6 +1,7 @@
 import { Typography, AppBar, Toolbar, Box } from '@mui/material';
 import StarsIcon from '@mui/icons-material/Stars';
 import MarcelButton from './MarcelButton';
+import NightModeToggle from './NightModeToggle';
 
 const JniAppBar = () => {
 	return (
@@ -19,7 +20,12 @@ const JniAppBar = () => {
 								Learning Material UI with React
 							</Typography>
 						</Box>
-						<MarcelButton />
+						<Box display="flex">
+							<Box mr={1}>   {/* Adding some space to the right */}
+								<NightModeToggle />
+							</Box>
+							<MarcelButton />
+						</Box>
 					</Box>
 				</Toolbar>
 			</AppBar>
