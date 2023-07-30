@@ -17,7 +17,7 @@ const JniAppBar = () => {
 						<Box display="flex">
 							<StarsIcon />
 							<Typography variant="h6">
-								Learning Material UI with React
+								Learning MUI
 							</Typography>
 						</Box>
 						<Box display="flex">
